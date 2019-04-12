@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Offer } from '../offer';
 import { Router } from '@angular/router';
 import { OfferService } from '../offer.service';
@@ -40,7 +40,7 @@ export class OfferListComponent implements OnInit {
   }
 
   showAddOfferComponent() {
-    this.is_insert = !this.is_insert;
+    this.router.navigate(['/offersAdd']);
   }
 
   showEditOfferComponent(updated_offer: Offer) {
