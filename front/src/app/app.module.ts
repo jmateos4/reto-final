@@ -35,11 +35,17 @@ import {PartsModule} from './parts/parts.module';
 import {SpecialtiesModule} from './specialties/specialties.module';
 import {HttpErrorHandler} from './error.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { OfferListComponent } from './offers/offer-list/offer-list.component';
+import { OfferFormComponent } from './offers/offer-form/offer-form.component';
+import { OfferValidComponent } from './offers/offer-valid/offer-valid.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    OfferListComponent,
+    OfferFormComponent,
+    OfferValidComponent,
   ],
   imports: [
     BrowserModule,
