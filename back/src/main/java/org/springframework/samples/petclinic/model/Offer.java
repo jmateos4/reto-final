@@ -1,37 +1,31 @@
 package org.springframework.samples.petclinic.model;
 
-
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name = "offers")
+@Table(name = "Offers")
 public class Offer extends BaseEntity{
-
-	@Column(name = "Title")
-	@NotEmpty
+	
+	//private int id; lo hereda de BaseEntity
+	@Column(name = "title")
 	private String title;
 	
-	@Column(name = "Description")
-	@NotEmpty
+	@Column(name = "descripion")
 	private String description;
 	
-	@Column(name = "Discount")
-	@NotEmpty
+	@Column(name = "discount")
 	private double discount;
 	
-	@Column(name = "ExpireDate")
-	@NotEmpty
 	@Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy/MM/dd")
+	@Column(name = "expire_data")
 	private Date expireDate;
 
 	public String getTitle() {
@@ -71,9 +65,8 @@ public class Offer extends BaseEntity{
 		return "Offer [title=" + title + ", description=" + description + ", discount=" + discount + ", expireDate="
 				+ expireDate + "]";
 	}
+	
+	
+	
 
-	
-	
-	
-	
 }
