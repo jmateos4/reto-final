@@ -5,8 +5,11 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.samples.petclinic.model.Offer;
+import org.springframework.stereotype.Repository;
 
-public interface OfferRepository extends JpaRepository<Offer,Integer> {
+@Repository
+public interface OfferRepository extends JpaRepository<Offer, Integer>{
+
+	public List <Offer> findByExpireDateAfter(Date now);
 	
-	List<Offer> findByExpireDateAfter(Date today);
 }

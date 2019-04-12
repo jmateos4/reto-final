@@ -1,30 +1,31 @@
 package org.springframework.samples.petclinic.model;
 
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="offers")
+@Table(name = "Offers")
 public class Offer extends BaseEntity{
-	@Column(name="title")
+	
+	//private int id; lo hereda de BaseEntity
+	@Column(name = "title")
 	private String title;
 	
-	@Column(name="description")
+	@Column(name = "descripion")
 	private String description;
 	
-	@Column(name="discount")
-	private String discount;
+	@Column(name = "discount")
+	private double discount;
 	
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern = "yyyy/MM/dd")
-	@Column(name="expireDate")
+    @DateTimeFormat(pattern = "yyyy/MM/dd")
+	@Column(name = "expire_data")
 	private Date expireDate;
 
 	public String getTitle() {
@@ -43,11 +44,11 @@ public class Offer extends BaseEntity{
 		this.description = description;
 	}
 
-	public String getDiscount() {
+	public double getDiscount() {
 		return discount;
 	}
 
-	public void setDiscount(String discount) {
+	public void setDiscount(double discount) {
 		this.discount = discount;
 	}
 
@@ -58,7 +59,12 @@ public class Offer extends BaseEntity{
 	public void setExpireDate(Date expireDate) {
 		this.expireDate = expireDate;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Offer [title=" + title + ", description=" + description + ", discount=" + discount + ", expireDate="
+				+ expireDate + "]";
+	}
 	
 	
 	
