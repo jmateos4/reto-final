@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Offer } from '../offer';
 import { OfferService } from '../offer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-offer-form',
@@ -14,7 +15,7 @@ export class OfferFormComponent implements OnInit {
   errorMessage: string;
   @Output() onNew = new EventEmitter<Offer>();
 
-  constructor(private offerService : OfferService) {
+  constructor(private offerService : OfferService, private router:Router) {
     this.offer = <Offer>{};
   }
 
@@ -31,6 +32,10 @@ export class OfferFormComponent implements OnInit {
       },
       error => this.errorMessage = <any>error
     );
+}
+
+gotoOwnersList(){
+  this.router.navigate(['/offers']);
 }
 
 
