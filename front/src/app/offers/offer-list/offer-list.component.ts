@@ -33,7 +33,7 @@ export class OfferListComponent implements OnInit, OnDestroy {
   }
 
   public gotoHome() {
-    // TODO
+    this.router.navigate(['/welcome']);
   }
 
   public addOffer() {
