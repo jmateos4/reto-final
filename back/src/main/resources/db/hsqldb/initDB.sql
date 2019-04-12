@@ -83,9 +83,9 @@ CREATE INDEX fk_username_idx ON roles (username);
 
 
 CREATE TABLE offers (
-  id              	INTEGER IDENTITY PRIMARY KEY,
-  title        		VARCHAR(100) NOT NULL,
-  description  		VARCHAR(1200) NOT NULL
-  discount			DOUBLE NOT NULL,	
-  expire_date		DATE
+  id              INTEGER IDENTITY PRIMARY KEY,
+  title        	  VARCHAR(100) NOT NULL,
+  description     VARCHAR(1200) NOT NULL,
+  discount     	  DOUBLE NOT NULL,
+  expire_date     DATE
 );

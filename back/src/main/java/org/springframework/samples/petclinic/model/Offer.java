@@ -10,14 +10,14 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name = "Offers")
+@Table(name = "offers")
 public class Offer extends BaseEntity{
 	
 	//private int id; lo hereda de BaseEntity
 	@Column(name = "title")
 	private String title;
 	
-	@Column(name = "descripion")
+	@Column(name = "description")
 	private String description;
 	
 	@Column(name = "discount")
@@ -25,7 +25,7 @@ public class Offer extends BaseEntity{
 	
 	@Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy/MM/dd")
-	@Column(name = "expire_data")
+	@Column(name = "expire_date")
 	private Date expireDate;
 
 	public String getTitle() {

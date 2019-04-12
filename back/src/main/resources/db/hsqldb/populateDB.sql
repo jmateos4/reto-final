@@ -58,5 +58,9 @@ INSERT INTO roles (username, role) VALUES ('admin', 'ROLE_OWNER_ADMIN');
 INSERT INTO roles (username, role) VALUES ('admin', 'ROLE_VET_ADMIN');
 INSERT INTO roles (username, role) VALUES ('admin', 'ROLE_ADMIN');
 
-INSERT INTO offers VALUES (1, 'Primera oferta', 'Descripción de la primera oferta', 50.0, '2019-05-12');
-INSERT INTO offers VALUES (2, 'Segunda oferta', 'Descripción de la segunda oferta', 30.0, '2019-06-12');
+INSERT INTO offers VALUES (1, 'Oferta 1', 'La descripcion de la oferta 1', 24.0, '2019-01-01');
+INSERT INTO offers VALUES (2, 'Oferta 2', 'La descripcion de la oferta 2', 36.0, '2019-03-01');
+INSERT INTO offers VALUES (3, 'Oferta 3', 'La descripcion de la oferta 3', 48.0, '2019-05-01');
+INSERT INTO offers VALUES (4, 'Oferta 4', 'La descripcion de la oferta 4', 64.0, '2019-07-01');
+INSERT INTO offers VALUES (5, 'Oferta 2', 'La descripcion de la oferta 5', 72.0, '2019-09-01');
+INSERT INTO offers VALUES (6, 'Oferta 5', 'La descripcion de la oferta 6', 86.0, '2019-11-01');
