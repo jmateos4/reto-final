@@ -57,3 +57,6 @@ INSERT INTO users(username,password,enabled) VALUES ('admin','admin', true);
 INSERT INTO roles (username, role) VALUES ('admin', 'ROLE_OWNER_ADMIN');
 INSERT INTO roles (username, role) VALUES ('admin', 'ROLE_VET_ADMIN');
 INSERT INTO roles (username, role) VALUES ('admin', 'ROLE_ADMIN');
+
+INSERT INTO offers VALUES (1, 'Primera oferta', 'Descripción de la primera oferta', 50.0, '2019-05-12');
+INSERT INTO offers VALUES (2, 'Segunda oferta', 'Descripción de la segunda oferta', 30.0, '2019-06-12');
