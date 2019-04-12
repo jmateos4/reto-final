@@ -24,9 +24,14 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from './parts/page-not-found/page-not-found.component';
 import {WelcomeComponent} from './parts/welcome/welcome.component';
+import { OfferListComponent } from './offers/offer-list/offer-list.component';
+import { OfferFormComponent } from './offers/offer-form/offer-form.component';
+
 
 const appRoutes: Routes = [
   {path: 'welcome', component: WelcomeComponent},
+  {path: 'offers', component: OfferListComponent},
+  {path: 'offersAdd', component: OfferFormComponent},
   {path: '', component: WelcomeComponent},
   {path: '**', component: PageNotFoundComponent}
 ];

@@ -1,14 +1,10 @@
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
-import { OwnerService } from 'app/owners/owner.service';
-=======
-import { environment } from 'environments/environment';
 import { HandleError, HttpErrorHandler } from 'app/error.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Offer } from './offer';
+import { environment } from 'environments/environment';
 import { catchError } from 'rxjs/operators';
->>>>>>> fa5bec2bcbe771042e5f61992d848b9e1d02f5de
 
 @Injectable({
   providedIn: 'root'

@@ -1,26 +1,23 @@
-<form class="form-horizontal" #offerForm="ngForm" (ngSubmit)="onSubmit(offerForm.value)">
-  <div class="form-group">
-    <label for="Title">Title </label>
-    <input type="text" class="form-control" required [(ngModel)]= "offer.title" name="title" #title="ngModel">
-    <div [hidden]= "title.valid || title.pristine" class = "alert alert-danger">Rellenar obligatorio</div>
+<div class="container-fluid">
+  <div class="container xd-container">
+    <h2>New Offer</h2>
+    <form id="offer" class="form-horizontal" (ngSubmit)="onSubmit(offerForm.value)" #offer="ngForm">
+      <div class="form-group" hidden="true"></div>
+        <input type="text" hidden="true" class="form-control" id="id" [(ngModel)]="offer.id" name="id"/>
+      <div class="form-group has-feedback">
+        <div class="form-group ">
+          <label class="col-sm-1 control-label">Title</label>
+          <label class="col-sm-1 control-label">Description</label>
+          <label class="col-sm-1 control-label">Discount</label>
+          <label class="col-sm-1 control-label">Expired date</label>
+          <div class="col-sm-6">
+            <input id="name" name="name" class="form-control" type="text" [(ngModel)]="offer.name"/>
+          </div>
+          <button class="btn btn-default" type="submit">Save</button>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-      <label for="Description">Description </label>
-      <input type="text" class="form-control" required [(ngModel)]= "offer.description" name="description" #description="ngModel">
-      <div [hidden]= "description.valid || description.pristine" class = "alert alert-danger">Rellenar obligatorio</div>
   </div>
-  <div class="form-group">
-      <label for="Discount">discount </label>
-      <input type="text" class="form-control" required [(ngModel)]= "offer.discount" name="discount" #discount="ngModel">
-      <div [hidden]= "discount.valid || discount.pristine" class = "alert alert-danger">Rellenar obligatorio</div>
-    </div>
-  <div class="form-group">
-      <label for="ExpireDate">ExpireDate </label>
-      <input type="text" class="form-control" required [(ngModel)]= "offer.expireDate" name="expireDate" #expireDate="ngModel">
-      <div [hidden]= "expireDate.valid || expireDate.pristine" class = "alert alert-danger">Rellenar obligatorio</div>
-  </div>
-  <div class ="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button class="btn btn-default" type="submit" [disabled]="!offerForm.valid">add Offer</button>
-    </div>
-  </div>
+
+

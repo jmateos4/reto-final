@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Offer } from '../offer';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-offer-list',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfferListComponent implements OnInit {
 
-  constructor() { }
+  offer: Offer[];
+
+  is_insert: boolean = false;
+
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+ 
+  goFormOffer() {
+    this.router.navigate(['/offersAdd']);
+  }
+
+  gotoHome() {
+    this.router.navigate(['/welcome']);
   }
 
 }
