@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Offer } from '../offer';
+import { HandleError } from 'app/error.service';
+import { OfferService } from '../offer.service';
 
 @Component({
   selector: 'app-offer-form',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfferFormComponent implements OnInit {
 
-  constructor() { }
+  offer : Offer;
+  private errorMessage: HandleError;
+  
+  constructor(private offerService : OfferService) { }
 
   ngOnInit() {
+  }
+
+  onSubmit(offer:Offer){
+  
+    this.offerService.addOffer(offer).subscribe(
+      new_offer => {
+        this.offer = new_offer;
+      },
+      error => this.errorMessage = <any>error
+    );
   }
 
 }
