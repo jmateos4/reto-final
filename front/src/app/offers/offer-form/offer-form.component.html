@@ -7,11 +7,20 @@
       <div class="form-group has-feedback">
         <div class="form-group ">
           <label class="col-sm-1 control-label">Title</label>
-          <label class="col-sm-1 control-label">Description</label>
-          <label class="col-sm-1 control-label">Discount</label>
-          <label class="col-sm-1 control-label">Expired date</label>
           <div class="col-sm-6">
-            <input id="name" name="name" class="form-control" type="text" [(ngModel)]="offer.name"/>
+            <input id="title" name="title" class="form-control" type="text" [(ngModel)]="offer.title"/>
+          </div>
+          <label class="col-sm-1 control-label">Description</label>
+          <div class="col-sm-6">
+            <input id="description" name="description" class="form-control" type="text" [(ngModel)]="offer.description"/>
+          </div>
+          <label class="col-sm-1 control-label">Discount</label>
+          <div class="col-sm-6">
+            <input id="discount" name="discount" class="form-control" type="text" [(ngModel)]="offer.discount"/>
+          </div>
+          <label class="col-sm-1 control-label">Expire date</label>
+          <div class="col-sm-6">
+            <input id="expireDate" name="expireDate" class="form-control" type="text" [(ngModel)]="offer.expireDate"/>
           </div>
           <button class="btn btn-default" type="submit">Save</button>
         </div>
